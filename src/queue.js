@@ -1,5 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
-
+const { NotImplementedError } = require('../lib/errors');
 // const { ListNode } = require('../extensions/list-node.js');
 
 /**
@@ -18,6 +17,7 @@ class Node {
   constructor(value, next = null) {
     this.value = value;
     this.next = next;
+
   }
 }
 
