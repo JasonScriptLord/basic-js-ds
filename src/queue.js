@@ -36,7 +36,7 @@ class Queue {
   }
 
   enqueue(value) {
-    const newNode = new Node(value);
+    const newNode = { value, next: null };
     if (!this.head || !this.tail) {
       this.head = newNode;
       this.tail = newNode;
@@ -50,7 +50,7 @@ class Queue {
 
   dequeue() {
     if (!this.head) {
-      return null;
+      return undefined;
     }
   
     const deletedHead = this.head.value;
